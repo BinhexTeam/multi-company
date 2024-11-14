@@ -14,11 +14,14 @@ class ReturnPicking(models.TransientModel):
         pick = self.picking_id
 
         # dont trigger on returns of incoming pickings
-        if pick.picking_type_code == "incoming":
+        if (
+            pick.picking_type_code == "incoming"
+            and not pick.intercompany_return_picking_id
+        ):
             return res
 
         # only trigger in case there is a coupled picking on the other side
-        ic_pick = pick.intercompany_picking_id
+        ic_pick = pick.intercompany_picking_id or pick.intercompany_return_picking_id
         if not ic_pick:
             return res
         dest_company = ic_pick.sudo().company_id
