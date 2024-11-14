@@ -38,8 +38,10 @@ class ProductIntercompanySupplierMixin(models.AbstractModel):
                 )
             # We pass the pricelist in the context in order to get the right
             # sale price on record.price (compatible v8 to v12)
-            for record in self.sudo().with_context(
-                pricelist=pricelist.id, automatic_intercompany_sync=True
+            for record in (
+                self.sudo()
+                .with_context(pricelist=pricelist.id, automatic_intercompany_sync=True)
+                .with_company(pricelist.company_id)
             ):
                 domain = record._get_intercompany_supplier_info_domain(pricelist)
                 supplierinfo = record.env["product.supplierinfo"].search(domain)
