@@ -22,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_invoice_consolidated](account_invoice_consolidated/) | 14.0.1.0.4 | [![max3903](https://github.com/max3903.png?size=30px)](https://github.com/max3903) [![swapnesh-serpentcs](https://github.com/swapnesh-serpentcs.png?size=30px)](https://github.com/swapnesh-serpentcs) | Consolidate your invoices across companies
-[account_invoice_inter_company](account_invoice_inter_company/) | 14.0.1.4.2 |  | Intercompany invoice rules
+[account_invoice_inter_company](account_invoice_inter_company/) | 14.0.1.6.1 |  | Intercompany invoice rules
 [account_invoice_inter_company_queued](account_invoice_inter_company_queued/) | 14.0.1.0.1 |  | Generate invoices using jobs
 [account_invoice_inter_company_sale](account_invoice_inter_company_sale/) | 14.0.1.0.0 |  | Show sale related fields
 [account_move_change_company](account_move_change_company/) | 14.0.1.0.2 |  | Allow to change company of account moves
@@ -35,7 +35,7 @@ addon | version | maintainers | summary
 [ir_config_parameter_multi_company](ir_config_parameter_multi_company/) | 14.0.1.0.1 | [![deniscraciungabriel](https://github.com/deniscraciungabriel.png?size=30px)](https://github.com/deniscraciungabriel) [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Add res company field in ir config parameter
 [login_all_company](login_all_company/) | 14.0.1.0.1 |  | Access all your companies when you log in
 [mail_multicompany](mail_multicompany/) | 14.0.0.1.0 |  | Email Gateway Multi company
-[mail_template_multi_company](mail_template_multi_company/) | 14.0.1.0.0 | [![Olivier-LAURENT](https://github.com/Olivier-LAURENT.png?size=30px)](https://github.com/Olivier-LAURENT) | Mail Template Multi Company
+[mail_template_multi_company](mail_template_multi_company/) | 14.0.1.0.1 | [![Olivier-LAURENT](https://github.com/Olivier-LAURENT.png?size=30px)](https://github.com/Olivier-LAURENT) | Mail Template Multi Company
 [multicompany_configuration](multicompany_configuration/) | 14.0.1.0.0 |  | Simplify the configuration on multicompany environments
 [partner_contact_company_propagation](partner_contact_company_propagation/) | 14.0.1.0.0 |  | Propagate company info to children contacts
 [partner_multi_company](partner_multi_company/) | 14.0.1.1.0 | [![aleuffre](https://github.com/aleuffre.png?size=30px)](https://github.com/aleuffre) [![PicchiSeba](https://github.com/PicchiSeba.png?size=30px)](https://github.com/PicchiSeba) [![renda-dev](https://github.com/renda-dev.png?size=30px)](https://github.com/renda-dev) | Select individually the partner visibility on each company
@@ -47,7 +47,7 @@ addon | version | maintainers | summary
 [product_supplierinfo_intercompany_multi_company](product_supplierinfo_intercompany_multi_company/) | 14.0.1.1.0 |  | Compatibility of product_multi_company and product_supplierinfo_intercompany
 [product_tax_multicompany_default](product_tax_multicompany_default/) | 14.0.1.2.0 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) | Product Tax Multi Company Default
 [purchase_quick_intercompany](purchase_quick_intercompany/) | 14.0.0.1.1 |  | Purchase Quick Intercompany
-[purchase_sale_inter_company](purchase_sale_inter_company/) | 14.0.2.2.2 | [![aleuffre](https://github.com/aleuffre.png?size=30px)](https://github.com/aleuffre) [![renda-dev](https://github.com/renda-dev.png?size=30px)](https://github.com/renda-dev) | Intercompany PO/SO rules
+[purchase_sale_inter_company](purchase_sale_inter_company/) | 14.0.2.3.2 | [![aleuffre](https://github.com/aleuffre.png?size=30px)](https://github.com/aleuffre) [![renda-dev](https://github.com/renda-dev.png?size=30px)](https://github.com/renda-dev) | Intercompany PO/SO rules
 [res_company_code](res_company_code/) | 14.0.1.0.1 |  | Add 'code' field on company model
 [stock_intercompany](stock_intercompany/) | 14.0.1.1.1 |  | Stock Intercompany Delivery-Reception
 

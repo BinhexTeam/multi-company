@@ -82,6 +82,12 @@ class AccountMove(models.Model):
             # nor the invoices that were already validated in the past
             dest_company = src_invoice._find_company_from_invoice_partner()
             if dest_company:
+                # If one of the involved companies have the intercompany setting disabled, skip
+                if (
+                    not dest_company.intercompany_invoicing
+                    or not src_invoice.company_id.intercompany_invoicing
+                ):
+                    continue
                 intercompany_user = dest_company.intercompany_invoice_user_id
                 if intercompany_user:
                     src_invoice = src_invoice.with_user(intercompany_user).sudo()
@@ -258,6 +264,7 @@ class AccountMove(models.Model):
         dest_invoice_data.journal_id = dest_journal
         dest_invoice_data.partner_id = self.company_id.partner_id
         dest_invoice_data.ref = self.name
+        dest_invoice_data.payment_reference = self.payment_reference
         dest_invoice_data.invoice_date = self.invoice_date
         dest_invoice_data.narration = self.narration
         dest_invoice_data.currency_id = self.currency_id
@@ -322,6 +329,8 @@ class AccountMove(models.Model):
         if self.env.context.get("skip_check_amount_difference"):
             return res
         for move in self.filtered("auto_invoice_id"):
+            if not move.company_id.intercompany_invoice_lock:
+                continue
             if (
                 float_compare(
                     move.amount_total,
